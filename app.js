@@ -1,4 +1,7 @@
-const cool = require("cool-ascii-faces");
+// projectName: ToDoList web application
+// Author: Lilian Umeakunne
+// Date created: August 2021
+
 const PORT = process.env.PORT || 3000;
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -7,14 +10,14 @@ const _ = require ("lodash");
 const app = express();
 
 
-// Create a new database inside mongodb.
+// connection to mongodb.
 mongoose.connect("mongodb+srv://admin-Lilian:Test123@cluster0.6gjuc.mongodb.net/todoListDB", {useNewUrlParser: true, useUnifiedTopology: true}, { useFindAndModify: false });
 
-// Create a new Items Schema.
+// new Items Schema.
 const itemsSchema = ({
     name: String,
 });
-// Create a model out of the Schema(Capitalised).
+// a model made off of the Schema(Capitalized).
 
 const Item = mongoose.model("Item", itemsSchema);
 
@@ -23,7 +26,7 @@ const Laundry = new Item({ name: "Laundry" });
 const Cook = new Item({ name: "Cook" });
 const Eat = new Item({ name: "Eat" });
 
-// Set as default array.
+// default array.
 const defaultItems = [Laundry, Cook, Eat];
 
 const listSchema = {
@@ -103,8 +106,6 @@ app.post("/", function (req, res){
             res.redirect("/" + listName);
         })
     }
-
-  
 });
     
 
@@ -131,7 +132,6 @@ app.post("/delete", function(req, res){
   
 });
  
-
 app.get("/about", function(req, res){
     res.render("about");
 });
