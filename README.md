@@ -1,6 +1,6 @@
 # To-Do-List-web-app
 This is a code repository for a responsive web app. This Todo list app project was created to allow users to make differents lists (school, home, work etc) without having to lift a finger.
-This completed project was achieved using HTML, CSS, Javascript, Nodejs, Expressjs, MongoDB and EJS
+This completed project was achieved using **HTML, CSS, Javascript, Nodejs, Expressjs, MongoDB and EJS**
 
 The live project is hosted here: https://tinyurl.com/3mrsr6xm
 
